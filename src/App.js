@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import QrCodeChekerPage from "./components/QrCodeCheckerPage/QrCodeCheckPage"
+import LegacyModeExample from "./components/QrCodeCheckerPage/QrCodeChecker/LegacyTest";
+import {BrowserRouter, Route} from "react-router-dom";
+import QuizPage from "./components/quizpage/QuizPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <BrowserRouter>
+          <Route exact path='/hi' component={QuizPage}/>
+          <Route exact path='/' component={QrCodeChekerPage}/>
+      </BrowserRouter>
+      );
 }
 
 export default App;
