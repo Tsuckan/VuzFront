@@ -3,7 +3,7 @@ import Style_Sheet from "./QuizPage.module.css"
 import Heart from "../../UnCheckedHeart.svg"
 import CheckedHeart from "../../CheckedHeart.svg"
 import Logo from "../../MIREA_Gerb_Colour.png"
-const QuizPage = (props) =>
+const Hearts = (props) =>
 {
     let checked=[1,0,0,0,0]
     let CheckedHeartRendered = <img src={CheckedHeart} alt=""/>;
